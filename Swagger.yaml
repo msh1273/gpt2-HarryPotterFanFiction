@@ -1,0 +1,75 @@
+openapi: 3.0.0   # Open api version
+
+info:
+  title: GPT2-HarryPotter-fanfiction
+  version: "v0.1"
+  contact:
+    name: msh1273
+  description: |
+    This app is generate your own Harry Potter fanfiction,
+    trained off of the top 100 rated fanficition stories.
+    ---
+servers:
+  - url: https://main-gpt2-HarryPotterFF-msh1273.endpoint.ainize.ai/
+
+paths:
+  /GPT2-HarryPotterFF/short:
+    post:
+      requestBody:
+        required: true
+        description: |
+          This request will get short response. That means a word including special character.
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                samples:
+                  type: integer
+      responses:   # Set response
+        '200':
+          description: "Successful Response"
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: "Bad Request Error"
+        '429':
+          description: "Too many requests"
+        '500':
+          description: "Server-side Error"
+
+
+  /GPT2-HarryPotterFF/long:
+    post:
+      requestBody:
+        required: true
+        description: |
+          This request will get long response. That is marketing man style text. length must be more than 20. If less than 20, it's replaced 20.
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                samples:
+                  type: string
+                length:
+                  type: string
+      responses:   # Set response
+        '200':
+          description: "Successful Response"
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: "Bad Request Error"
+        '429':
+          description: "Too many requests"
+        '500':
+          description: "Server-side Error"
