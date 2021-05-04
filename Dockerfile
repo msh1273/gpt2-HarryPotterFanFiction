@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 WORKDIR /app
 COPY . .
 
-CMD python3 app.py
+CMD python3 server.py
