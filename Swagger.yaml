@@ -12,7 +12,7 @@ info:
     url: https://github.com/huggingface/transformers/blob/master/LICENSE
 
 servers:
-  - url: https://main-gpt2-HarryPotterFF-msh1273.endpoint.ainize.ai
+  - url: https://main-gpt2-harrypotter-msh1273.endpoint.ainize.ai
 
 paths:
   /gpt2-harrypotter/short:
