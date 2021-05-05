@@ -1,7 +1,7 @@
 openapi: 3.0.1
 
 info:
-  title: ainize-gpt2-cover-letter
+  title: GPT2-HarryPotterFanFiction
   description: |
     HarryPotterFanFiction-gpt2
   contact:
