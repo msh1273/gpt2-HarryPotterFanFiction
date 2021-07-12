@@ -1,4 +1,4 @@
-# gtp2-HarryPotterFanFiction
+# GPT2-HarryPotterFanFiction
 ---
 language: en
 
